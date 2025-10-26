@@ -29,34 +29,34 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @NoArgsConstructor // Lombok: genera un constructor sin parámetros (vacío)
 @Entity // 🔵 Indicamos que es una entidad de base de datos
 @Table(name = "FS_CATALOGOS")
-@JsonPropertyOrder({"id", "titulo","autor","anio_publicacion","genero"}) // orden de json
+@JsonPropertyOrder({ "id", "titulo", "autor", "anio_publicacion", "genero" }) // orden de json
 public class Catalogo {
 
-    // identificador 
+    // identificador
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Long id;
-    
+
     // titulo del libro
     @NotBlank(message = "Título no puede estar vacío")
     @Size(min = 1, max = 200, message = "Título debe tener entre 1 y 200 caracteres")
     @Column(name = "TITULO", length = 255, nullable = false)
     private String titulo;
-    
+
     // autor del libro
     @NotBlank(message = "Autor no puede estar vacío")
     @Size(min = 1, max = 200, message = "Autor debe tener entre 1 y 200 caracteres")
     @Column(name = "AUTOR", length = 200, nullable = false)
     private String autor;
-    
+
     // año de publicación
     @NotNull(message = "Año de publicación no puede estar vacío")
     @Min(value = 1000, message = "Año debe ser mayor a 1000")
     @Max(value = 2999, message = "Año no puede ser en el futuro")
     @Column(name = "ANIO_PUBLICACION")
     private Integer anioPublicacion;
-    
+
     // genero de la publicación
     @NotBlank(message = "Género no puede estar vacío")
     @Size(min = 1, max = 75, message = "Género debe tener entre 1 y 75 caracteres")

@@ -37,9 +37,8 @@ public class CatalogoService {
                 log.debug("Servicio: guardar({})", catalogo.getTitulo());
 
                 // Si tiene ID y existe en BD, es una ACTUALIZACIÓN (permitir)
-    // Si tiene ID y NO existe, es un error
-    // Si NO tiene ID, es un INSERT nuevo (permitir)
-
+                // Si tiene ID y NO existe, es un error
+                // Si NO tiene ID, es un INSERT nuevo (permitir)
 
                 // Solo validar si el ID no es null (es decir, es una actualización)
                 if (catalogo.getId() != null && !catalogoRepository.existsById(catalogo.getId())) {

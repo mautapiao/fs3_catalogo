@@ -1,7 +1,6 @@
 package com.mtapia.biblioteca.exception;
 
 // -------------------- IMPORTACIONES -------------------------
-
 // Importa los códigos de estado HTTP que usaremos para asignar un 404
 import org.springframework.http.HttpStatus;
 

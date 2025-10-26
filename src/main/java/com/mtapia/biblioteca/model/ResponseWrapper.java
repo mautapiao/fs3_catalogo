@@ -22,7 +22,7 @@ import java.util.List;
  * dato (películas, usuarios, etc.).
  */
 @JsonPropertyOrder({ "status", "cantidad", "timestamp", "data" }) // Esto define explícitamente el orden de los campos
-public class ResponseWrapper<T>{
+public class ResponseWrapper<T> {
     // -------------------- ATRIBUTOS -------------------------
 
     // Indica si la operación fue exitosa u otro estado (por ejemplo: OK, ERROR)
@@ -86,9 +86,7 @@ public class ResponseWrapper<T>{
         this.data = data;
     }
 
-
 }
-
 
 /*
  * ¿Qué es esta clase?

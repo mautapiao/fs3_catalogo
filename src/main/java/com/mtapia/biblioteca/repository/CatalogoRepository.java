@@ -21,6 +21,6 @@ import com.mtapia.biblioteca.model.Catalogo;
  */
 @Repository
 public interface CatalogoRepository extends JpaRepository<Catalogo, Long> {
-     // Por ahora no necesitamos agregar métodos adicionales.
+    // Por ahora no necesitamos agregar métodos adicionales.
     // Solo con la herencia ya tenemos disponibles todas las operaciones básicas.
 }
