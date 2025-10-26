@@ -25,3 +25,5 @@ EXPOSE 8080
 # Comando por defecto que se ejecutará cuando se inicie el contenedor.
 # Inicia la aplicación ejecutando el archivo app.jar con Java.
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
+ENV SPRING_PROFILES_ACTIVE=docker
