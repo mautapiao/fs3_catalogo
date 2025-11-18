@@ -13,6 +13,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -29,6 +30,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @NoArgsConstructor // Lombok: genera un constructor sin parámetros (vacío)
 @Entity // 🔵 Indicamos que es una entidad de base de datos
 @Table(name = "FS_CATALOGOS")
+@Builder
 @JsonPropertyOrder({ "id", "titulo", "autor", "anio_publicacion", "genero" }) // orden de json
 public class Catalogo {
 

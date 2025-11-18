@@ -37,7 +37,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @RestController
-@RequestMapping("/catalogos")
+@RequestMapping("/api/libros")
 public class CatalogoController {
 
     // Servicio donde se encuentra la lógica de negocio asociada a catálogos.
